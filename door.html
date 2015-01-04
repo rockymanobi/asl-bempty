@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ASL-Bempty</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">  
+    <link href="/css/index.css" media="all" rel="stylesheet">
+    <link href="/css/notifit.css" media="all" rel="stylesheet">
+  </head>
+  <body>
+    <div class="disconnect-message">
+      サーバとの接続が途切れています..情報は最新ではないかもしれません。
+    </div>
+    <div id="sensor" class="">
+      <div>センサー監視時間帯 : <span id="running-time"></span></div>
+      <span class="running-text sensor-status-text">絶賛監視中です</span>
+      <span class="sleeping-text sensor-status-text">監視時間帯では無いため、現在監視していません</span>
+      <span class="error-text sensor-status-text">センサーに異常が発生しています</span>
+      <span class="dead-text sensor-status-text">TweLiteからの信号が途切れました</span>
+    </div>
+    <div class="container">
+    </div>
+    <div class="controller">
+      <button id="tell-me-btn">空いたら教えて</button>
+    </div>
+  <footer>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/underscore.js"></script>
+  <script src="/js/moment.js"></script>
+  <script src="/js/notifit.js"></script>
+  <script src="/js/index.js"></script>
+  <script type="text/javascript">
+
+    var initial = {};
+    initial.stall1 = { uuid: "<%- @stall1.uuid %>", status: <%- @stall1.status %>};
+    initial.stall2 = { uuid: "<%- @stall2.uuid %>", status: <%- @stall2.status %>};
+    initial.sensor = { uuid: "<%- @sensor.uuid %>", status: <%- @sensor.status %>, runningFrom: "<%- @sensor.runningFrom %>", runningTo: "<%- @sensor.runningTo %>"};
+  </script>
+
+
+  </body>
+</html>
+

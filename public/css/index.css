@@ -1,0 +1,115 @@
+body{ margin:0; padding: 0;}
+
+#tell-me-btn{
+  display: none;
+}
+
+.both-occupied #tell-me-btn{
+  display: inline-block;
+}
+
+.waiting #tell-me-btn{
+  display: none;
+}
+
+
+.container{
+  box-sizing: border-box;
+
+
+  /*
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  */
+}
+
+
+.stall{
+  color: white;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+
+  transition: background-color 0.5s;
+}
+
+.stall-box{
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.stall.occupied{
+  background-color: red;
+}
+.stall.vacant{
+  background-color: blue;
+}
+.stall.unknown{
+  background-color: gray;
+}
+
+
+.status-text{
+  display:none;
+}
+
+.vacant .vacant-text{
+  display: inline-block;
+}
+.occupied .occupied-text{
+  display: inline-block;
+}
+.unknown .unknown-text{
+  display: inline-block;
+}
+
+/* センサー */
+.sensor-status-text{
+  display: none;
+}
+.running .running-text{
+  display: inline-block;
+}
+.sleeping .sleeping-text{
+  display: inline-block;
+}
+.error .error-text{
+  display: inline-block;
+}
+.dead .dead-text{
+  display: inline-block;
+}
+
+/* コントローラ */
+
+.controller{
+  text-align: center;
+}
+
+#tell-me-btn{
+  background: #eeeeee;
+  border: solid 2px orange;
+  color: orange;
+  font-size: 18px;
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+
+/* Disconnect メッセージ */
+.disconnect .disconnect-message{
+  display: block;
+}
+
+.disconnect-message{
+  display: none;
+}
+
